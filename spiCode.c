@@ -50,8 +50,7 @@ void ms_delay(int ms) {
 
 int txSetup(void) {
 // Tell Tx register address; write register value
-    writeSPI1(0x30);
-    ms_delay(200);
+
     writeSPI1(0x0B);
     ms_delay(10);
     writeSPI1(SMARTRF_SETTING_FSCTRL1);
@@ -62,8 +61,12 @@ int txSetup(void) {
 void main(void) {
     TRISA = 0x00;
     PORTA = 0x01;
+    writeSPI1(0x30);
+    ms_delay(200);
     
+    PORTA = 0x00;
     SPI1Init(); // Initialize SPI port.
+    PORTA = 0x01;
     
     PORTA = 0x00;
     ms_delay(36);
