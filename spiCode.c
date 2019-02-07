@@ -1,13 +1,14 @@
 /*  Rocket Telemetry Senior Design Project
-    Author: David Dalvin 
+    Author: David Dalvifn 
     Created on 1/22/2019
     Version 1.0
-    SPI Code to Inferface with CC1101 Transmitter and Receiver
+    SPI Code to Interface with CC1101 Transmitter and Receiver
  */
 
 #include "config.h"
 #include "smartrf_CC1101.h"
-// #include "transmitterConfiguration.h"
+#include "transmitterConfiguration.h"
+#include "LCDDisplay.h"
 
 int registerStatus;
 
@@ -48,31 +49,25 @@ void ms_delay(int ms) {
     while (TMR2 < ms * 63); // 1/16MHz/(256*63)) = 0.001008 close to 1 ms.)
 }
 
-int txSetup(void) {
-// Tell Tx register address; write register value
-    writeSPI1(0x0B);
-    ms_delay(10);
-    writeSPI1(SMARTRF_SETTING_FSCTRL1);
-    ms_delay(10);
-    return 0;
-}
+
 
 void main(void) {
     TRISA = 0x00;
     PORTA = 0x01;
     
-    PORTA = 0x00;
-    us_delay(10);
-    SPI1Init(); // Initialize SPI port.
-    PORTA = 0x01;
-    us_delay(10);
+    ms_delay(32); // At least 30ms for LCD Internal Initialization
+    InitPMP(); // Initialize the Parallel Master Port
+    InitLCD(); // Initialize the LCD
     
+    SPI1Init(); // Initialize SPI port.
     PORTA = 0x00;
     ms_delay(36);
     
     txSetup(); //
     us_delay(200);
-
+    SetCursorAtLine(1);
+    putsLCD("RegCon YES");
+    
     registerStatus = writeSPI1(0x8B);
     us_delay(200);
     registerStatus = readSPI1();
