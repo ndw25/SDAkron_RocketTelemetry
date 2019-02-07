@@ -1,5 +1,5 @@
 /*  Rocket Telemetry Senior Design Project
-    Author: David Dalvifn 
+    Author: David Dalvin 
     Created on 1/22/2019
     Version 1.0
     SPI Code to Interface with CC1101 Transmitter and Receiver
@@ -64,9 +64,11 @@ void main(void) {
     ms_delay(36);
     
     txSetup(); //
-    us_delay(200);
+    us_delay(50);
     SetCursorAtLine(1);
-    putsLCD("RegCon YES");
+    putsLCD("RS Config");
+    SetCursorAtLine(2);
+    putsLCD("Success");
     
     registerStatus = writeSPI1(0x8B);
     us_delay(200);
