@@ -50,7 +50,6 @@ void ms_delay(int ms) {
 }
 
 
-
 void main(void) {
     TRISA = 0x00;
     PORTA = 0x01;
@@ -59,6 +58,17 @@ void main(void) {
     InitPMP(); // Initialize the Parallel Master Port
     InitLCD(); // Initialize the LCD
     
+    ClrLCD();
+    SetCursorAtLine(1);
+    putsLCD("Successfully");
+    SetCursorAtLine(2);
+    putsLCD("Powered On");
+    ms_delay(500);
+    ms_delay(500);
+    ms_delay(500);
+    ms_delay(500);
+    ClrLCD();
+            
     SPI1Init(); // Initialize SPI port.
     PORTA = 0x00;
     ms_delay(36);
