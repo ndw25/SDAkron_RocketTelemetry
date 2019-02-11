@@ -73,9 +73,9 @@
             for (a = 1; a < 20; a++) //Loop to flash LEDs for 5 seconds at 2Hz
             {
                 PORTA = 0xFF; //Turns LEDs on
-                ms_delay(2000); //Delays half of the cycle // On For 2 Seconds
+                ms_delay(1000); //Delays half of the cycle // On For 2 Seconds
                 PORTA = 0x00; //Turns LEDs off
-                ms_delay(1000); //Delays half of the cycle // Off For 1 Seconds
+                ms_delay(500); //Delays half of the cycle // Off For 1 Seconds
             }
         }
     }
