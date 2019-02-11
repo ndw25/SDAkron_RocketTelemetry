@@ -1,4 +1,6 @@
 build/default/production/spiCode.o:  \
 spiCode.c  \
 config.h  \
- transmitterConfiguration.h 
+smartrf_CC1101.h  \
+ transmitterConfiguration.h  \
+LCDDisplay.h 
