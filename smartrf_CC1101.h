@@ -5,6 +5,10 @@
  *  compatible #define statements.
  *
  ***************************************************************/
+// https://www.edaboard.com/showthread.php?259494-CC1101-doesn-t-transmit-correctly
+// https://github.com/SpaceTeddy/CC1101/issues/12
+// https://forums.electricimp.com/t/cc1101-example-code/192
+
 
 #ifndef SMARTRF_CC1101_H
 #define SMARTRF_CC1101_H
