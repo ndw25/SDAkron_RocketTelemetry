@@ -7,7 +7,7 @@
 
 #include "config.h"
 #include "smartrf_CC1101.h"
-#include "transmitterConfiguration.h"
+#include "txRxRegisterConfiguration.h"
 #include "LCDDisplay.h"
 
 int registerStatus;
@@ -49,15 +49,14 @@ void ms_delay(int ms) {
     while (TMR2 < ms * 63); // 1/16MHz/(256*63)) = 0.001008 close to 1 ms.)
 }
 
-
 void main(void) {
     TRISA = 0x00;
     PORTA = 0x01;
-    
+
     ms_delay(32); // At least 30ms for LCD Internal Initialization
     InitPMP(); // Initialize the Parallel Master Port
     InitLCD(); // Initialize the LCD
-    
+
     ClrLCD();
     SetCursorAtLine(1);
     putsLCD("Successfully");
@@ -68,23 +67,23 @@ void main(void) {
     ms_delay(500);
     ms_delay(500);
     ClrLCD();
-            
+
     SPI1Init(); // Initialize SPI port.
     PORTA = 0x00;
     ms_delay(36);
-    
+
     txSetup(); //
     us_delay(50);
     SetCursorAtLine(1);
     putsLCD("RS Config");
     SetCursorAtLine(2);
     putsLCD("Success");
-    
+
     registerStatus = writeSPI1(0x8B);
     us_delay(200);
     registerStatus = readSPI1();
     us_delay(200);
-    
+
     PORTA = 0x01;
     us_delay(10);
     while (1) {

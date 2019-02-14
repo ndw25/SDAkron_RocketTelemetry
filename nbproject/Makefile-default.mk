@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=spiCode.c transmitterConfiguration.c LCDDisplay.c
+SOURCEFILES_QUOTED_IF_SPACED=spiCode.c LCDDisplay.c txRxRegisterConfiguration.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/spiCode.o ${OBJECTDIR}/transmitterConfiguration.o ${OBJECTDIR}/LCDDisplay.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/spiCode.o.d ${OBJECTDIR}/transmitterConfiguration.o.d ${OBJECTDIR}/LCDDisplay.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/spiCode.o ${OBJECTDIR}/LCDDisplay.o ${OBJECTDIR}/txRxRegisterConfiguration.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/spiCode.o.d ${OBJECTDIR}/LCDDisplay.o.d ${OBJECTDIR}/txRxRegisterConfiguration.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/spiCode.o ${OBJECTDIR}/transmitterConfiguration.o ${OBJECTDIR}/LCDDisplay.o
+OBJECTFILES=${OBJECTDIR}/spiCode.o ${OBJECTDIR}/LCDDisplay.o ${OBJECTDIR}/txRxRegisterConfiguration.o
 
 # Source Files
-SOURCEFILES=spiCode.c transmitterConfiguration.c LCDDisplay.c
+SOURCEFILES=spiCode.c LCDDisplay.c txRxRegisterConfiguration.c
 
 
 CFLAGS=
@@ -101,19 +101,19 @@ ${OBJECTDIR}/spiCode.o: spiCode.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE)  spiCode.c  -o ${OBJECTDIR}/spiCode.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/spiCode.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/spiCode.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/transmitterConfiguration.o: transmitterConfiguration.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/transmitterConfiguration.o.d 
-	@${RM} ${OBJECTDIR}/transmitterConfiguration.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  transmitterConfiguration.c  -o ${OBJECTDIR}/transmitterConfiguration.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/transmitterConfiguration.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/transmitterConfiguration.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
 ${OBJECTDIR}/LCDDisplay.o: LCDDisplay.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/LCDDisplay.o.d 
 	@${RM} ${OBJECTDIR}/LCDDisplay.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  LCDDisplay.c  -o ${OBJECTDIR}/LCDDisplay.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/LCDDisplay.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/LCDDisplay.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/txRxRegisterConfiguration.o: txRxRegisterConfiguration.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/txRxRegisterConfiguration.o.d 
+	@${RM} ${OBJECTDIR}/txRxRegisterConfiguration.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  txRxRegisterConfiguration.c  -o ${OBJECTDIR}/txRxRegisterConfiguration.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/txRxRegisterConfiguration.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/txRxRegisterConfiguration.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 else
 ${OBJECTDIR}/spiCode.o: spiCode.c  nbproject/Makefile-${CND_CONF}.mk
@@ -123,19 +123,19 @@ ${OBJECTDIR}/spiCode.o: spiCode.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE)  spiCode.c  -o ${OBJECTDIR}/spiCode.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/spiCode.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/spiCode.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/transmitterConfiguration.o: transmitterConfiguration.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/transmitterConfiguration.o.d 
-	@${RM} ${OBJECTDIR}/transmitterConfiguration.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  transmitterConfiguration.c  -o ${OBJECTDIR}/transmitterConfiguration.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/transmitterConfiguration.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/transmitterConfiguration.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
 ${OBJECTDIR}/LCDDisplay.o: LCDDisplay.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/LCDDisplay.o.d 
 	@${RM} ${OBJECTDIR}/LCDDisplay.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  LCDDisplay.c  -o ${OBJECTDIR}/LCDDisplay.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/LCDDisplay.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/LCDDisplay.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/txRxRegisterConfiguration.o: txRxRegisterConfiguration.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/txRxRegisterConfiguration.o.d 
+	@${RM} ${OBJECTDIR}/txRxRegisterConfiguration.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  txRxRegisterConfiguration.c  -o ${OBJECTDIR}/txRxRegisterConfiguration.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/txRxRegisterConfiguration.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/txRxRegisterConfiguration.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 
