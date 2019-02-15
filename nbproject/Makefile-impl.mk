@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=spiCode.X
+PROJECTNAME=SDAkron_RocketTelemetry
 
 # Active Configuration
 DEFAULTCONF=default

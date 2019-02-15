@@ -3,15 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/dd69/Desktop/spiCode.X/smartrf_CC1101.h</file>
-            <file>file:/C:/Users/dd69/Desktop/spiCode.X/config.h</file>
-            <file>file:/C:/Users/dd69/Desktop/spiCode.X/txRxRegisterConfiguration.c</file>
-            <file>file:/C:/Users/dd69/Desktop/spiCode.X/spiConfiguration.h</file>
-            <file>file:/C:/Users/dd69/Desktop/spiCode.X/LCDDisplay.h</file>
-            <file>file:/C:/Users/dd69/Desktop/spiCode.X/spiCode.c</file>
-            <file>file:/C:/Users/dd69/Desktop/spiCode.X/txRxRegisterConfiguration.h</file>
-            <file>file:/C:/Users/dd69/Desktop/spiCode.X/Makefile</file>
-            <file>file:/C:/Users/dd69/Desktop/spiCode.X/LCDDisplay.c</file>
+            <file>file:/D:/The%20University%20of%20Akron/2018-2019%20%20School%20Year/Super%20Senior%20Spring%20Semester/Senior%20Design/MPLABX%20Code/spiCode/SDAkron_RocketTelemetry/txRxRegisterConfiguration.h</file>
+            <file>file:/D:/The%20University%20of%20Akron/2018-2019%20%20School%20Year/Super%20Senior%20Spring%20Semester/Senior%20Design/MPLABX%20Code/spiCode/SDAkron_RocketTelemetry/spiCode.c</file>
+            <file>file:/D:/The%20University%20of%20Akron/2018-2019%20%20School%20Year/Super%20Senior%20Spring%20Semester/Senior%20Design/MPLABX%20Code/spiCode/SDAkron_RocketTelemetry/config.H</file>
+            <file>file:/D:/The%20University%20of%20Akron/2018-2019%20%20School%20Year/Super%20Senior%20Spring%20Semester/Senior%20Design/MPLABX%20Code/spiCode/SDAkron_RocketTelemetry/LCDDisplay.h</file>
+            <file>file:/D:/The%20University%20of%20Akron/2018-2019%20%20School%20Year/Super%20Senior%20Spring%20Semester/Senior%20Design/MPLABX%20Code/spiCode/SDAkron_RocketTelemetry/spiConfiguration.h</file>
+            <file>file:/D:/The%20University%20of%20Akron/2018-2019%20%20School%20Year/Super%20Senior%20Spring%20Semester/Senior%20Design/MPLABX%20Code/spiCode/SDAkron_RocketTelemetry/smartrf_CC1101.h</file>
         </group>
     </open-files>
 </project-private>
