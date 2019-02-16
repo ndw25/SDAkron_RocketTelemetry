@@ -47,11 +47,11 @@ int txSetup(void) {
     us_delay(10);
     writeSPI1(0x17); //NEED CORRECT WRITE ADDRESS
     us_delay(10);
-    writeSPI1(SMARTRF_SETTING_MCSM1)
+    writeSPI1(SMARTRF_SETTING_MCSM1);
     us_delay(10);
     writeSPI1(0x16); //NEED CORRECT WRITE ADDRESS
     us_delay(10);
-    writeSPI1(SMARTRF_SETTING_MCSM2)
+    writeSPI1(SMARTRF_SETTING_MCSM2);
     us_delay(10);
     writeSPI1(0x1A);
     us_delay(10);

@@ -11,7 +11,7 @@
 /
 /-------------------------------------------------------------------------*/
 
-#include <p24FJ64GA002.h>
+#include "../config.h"
 #include "pic24f.h"
 #include "uart_pic24f.h"
 
