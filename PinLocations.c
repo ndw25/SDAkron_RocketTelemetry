@@ -7,22 +7,23 @@
 #include <xc.h>
 
 
-    
+//extern GPIO_Handle    hGpio; /* GPIO handle */
+
 /**
  * Macros
  */
 // Select (SPI) CC1101
-#define cc1101_Select()  GPIO_pinWrite(P54, 0 )
+#define cc1101_Select()  GPIO_pinWrite( hGpio, GPIO_PIN0, 0 ) //CS -> P17
 // Deselect (SPI) CC1101
-#define cc1101_Deselect()  GPIO_pinWrite( hGpio, GPIO_PIN0, 1 )
+#define cc1101_Deselect()  GPIO_pinWrite( hGpio, GPIO_PIN0, 1 ) //CS -> P17
 // Wait until SPI MISO line goes low
-#define wait_Miso()  while(GPIO_pinRead( hGpio, GPIO_PIN8 ))
+#define wait_Miso()  while(GPIO_pinRead( hGpio, GPIO_PIN8 )) // SDI/ SI/ MISO -> P53 
 // Get GDO0 pin state
-#define getGDO0state()  bitRead(PORT_GDO0, BIT_GDO0)
+#define getGDO0state()  bitRead(PORT_GDO0, BIT_GDO0) //
 // Wait until GDO0 line goes high
-#define wait_GDO0_high() while(!GPIO_pinRead( hGpio, GPIO_PIN9 ))
+#define wait_GDO0_high() while(!GPIO_pinRead( hGpio, GPIO_PIN9 )) // GDO0 -> P13
 // Wait until GDO0 line goes low
-#define wait_GDO0_low()  while(GPIO_pinRead( hGpio, GPIO_PIN9 ))
+#define wait_GDO0_low()  while(GPIO_pinRead( hGpio, GPIO_PIN9 )) // GDO0 -> P13
 
 #define false 0
 #define true 1
