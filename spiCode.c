@@ -88,5 +88,7 @@ void main(void) {
     us_delay(10);
     while (1) {
         ms_delay(500);
+        
+        
     }
 }
