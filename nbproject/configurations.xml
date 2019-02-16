@@ -9,6 +9,8 @@
       <itemPath>txRxRegisterConfiguration.h</itemPath>
       <itemPath>smartrf_CC1101.h</itemPath>
       <itemPath>config.h</itemPath>
+      <itemPath>cc1101Packet.h</itemPath>
+      <itemPath>cc1101.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -20,6 +22,7 @@
       <itemPath>spiCode.c</itemPath>
       <itemPath>LCDDisplay.c</itemPath>
       <itemPath>txRxRegisterConfiguration.c</itemPath>
+      <itemPath>PinLocations.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

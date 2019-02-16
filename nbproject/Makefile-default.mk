@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=spiCode.c LCDDisplay.c txRxRegisterConfiguration.c
+SOURCEFILES_QUOTED_IF_SPACED=spiCode.c LCDDisplay.c txRxRegisterConfiguration.c PinLocations.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/spiCode.o ${OBJECTDIR}/LCDDisplay.o ${OBJECTDIR}/txRxRegisterConfiguration.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/spiCode.o.d ${OBJECTDIR}/LCDDisplay.o.d ${OBJECTDIR}/txRxRegisterConfiguration.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/spiCode.o ${OBJECTDIR}/LCDDisplay.o ${OBJECTDIR}/txRxRegisterConfiguration.o ${OBJECTDIR}/PinLocations.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/spiCode.o.d ${OBJECTDIR}/LCDDisplay.o.d ${OBJECTDIR}/txRxRegisterConfiguration.o.d ${OBJECTDIR}/PinLocations.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/spiCode.o ${OBJECTDIR}/LCDDisplay.o ${OBJECTDIR}/txRxRegisterConfiguration.o
+OBJECTFILES=${OBJECTDIR}/spiCode.o ${OBJECTDIR}/LCDDisplay.o ${OBJECTDIR}/txRxRegisterConfiguration.o ${OBJECTDIR}/PinLocations.o
 
 # Source Files
-SOURCEFILES=spiCode.c LCDDisplay.c txRxRegisterConfiguration.c
+SOURCEFILES=spiCode.c LCDDisplay.c txRxRegisterConfiguration.c PinLocations.c
 
 
 CFLAGS=
@@ -115,6 +115,13 @@ ${OBJECTDIR}/txRxRegisterConfiguration.o: txRxRegisterConfiguration.c  nbproject
 	${MP_CC} $(MP_EXTRA_CC_PRE)  txRxRegisterConfiguration.c  -o ${OBJECTDIR}/txRxRegisterConfiguration.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/txRxRegisterConfiguration.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/txRxRegisterConfiguration.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/PinLocations.o: PinLocations.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/PinLocations.o.d 
+	@${RM} ${OBJECTDIR}/PinLocations.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  PinLocations.c  -o ${OBJECTDIR}/PinLocations.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/PinLocations.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/PinLocations.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 else
 ${OBJECTDIR}/spiCode.o: spiCode.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -136,6 +143,13 @@ ${OBJECTDIR}/txRxRegisterConfiguration.o: txRxRegisterConfiguration.c  nbproject
 	@${RM} ${OBJECTDIR}/txRxRegisterConfiguration.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  txRxRegisterConfiguration.c  -o ${OBJECTDIR}/txRxRegisterConfiguration.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/txRxRegisterConfiguration.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/txRxRegisterConfiguration.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/PinLocations.o: PinLocations.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/PinLocations.o.d 
+	@${RM} ${OBJECTDIR}/PinLocations.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  PinLocations.c  -o ${OBJECTDIR}/PinLocations.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/PinLocations.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/PinLocations.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 

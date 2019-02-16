@@ -10,7 +10,7 @@
 #include "spiConfiguration.h"
 
 int txSetup(void) {
-// Tell Tx register address; write register value
+    // Tell Tx register address; write register value
     writeSPI1(0x30); // CC1101 System Reset 
     us_delay(10);
     writeSPI1(0x0B);
@@ -46,11 +46,11 @@ int txSetup(void) {
     writeSPI1(SMARTRF_SETTING_MCSM0);
     us_delay(10);
     writeSPI1(0x17); //NEED CORRECT WRITE ADDRESS
-    us_delay(10);       
+    us_delay(10);
     writeSPI1(SMARTRF_SETTING_MCSM1)
     us_delay(10);
     writeSPI1(0x16); //NEED CORRECT WRITE ADDRESS
-    us_delay(10);       
+    us_delay(10);
     writeSPI1(SMARTRF_SETTING_MCSM2)
     us_delay(10);
     writeSPI1(0x1A);
