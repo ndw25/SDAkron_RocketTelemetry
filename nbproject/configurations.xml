@@ -208,6 +208,30 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
       </C30Global>
+      <item path="FATfs_PIC24/diskio.h" ex="true" overriding="false">
+      </item>
+      <item path="FATfs_PIC24/ff.c" ex="true" overriding="false">
+      </item>
+      <item path="FATfs_PIC24/ff.h" ex="true" overriding="false">
+      </item>
+      <item path="FATfs_PIC24/ffconf.h" ex="true" overriding="false">
+      </item>
+      <item path="FATfs_PIC24/ffunicode.c" ex="true" overriding="false">
+      </item>
+      <item path="FATfs_PIC24/main.c" ex="true" overriding="false">
+      </item>
+      <item path="FATfs_PIC24/mmc_pic24f.c" ex="true" overriding="false">
+      </item>
+      <item path="FATfs_PIC24/pic24f.h" ex="true" overriding="false">
+      </item>
+      <item path="FATfs_PIC24/uart_pic24f.c" ex="true" overriding="false">
+      </item>
+      <item path="FATfs_PIC24/uart_pic24f.h" ex="true" overriding="false">
+      </item>
+      <item path="FATfs_PIC24/xprintf.c" ex="true" overriding="false">
+      </item>
+      <item path="FATfs_PIC24/xprintf.h" ex="true" overriding="false">
+      </item>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
         <property key="AutoSelectMemRanges" value="auto"/>
