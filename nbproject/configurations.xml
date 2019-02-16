@@ -11,9 +11,12 @@
       <itemPath>config.h</itemPath>
       <itemPath>cc1101Packet.h</itemPath>
       <itemPath>cc1101.h</itemPath>
-      <itemPath>FAT32_fatf/source/diskio.h</itemPath>
-      <itemPath>FAT32_fatf/source/ff.h</itemPath>
-      <itemPath>FAT32_fatf/source/ffconf.h</itemPath>
+      <itemPath>FATfs_PIC24/diskio.h</itemPath>
+      <itemPath>FATfs_PIC24/ff.h</itemPath>
+      <itemPath>FATfs_PIC24/ffconf.h</itemPath>
+      <itemPath>FATfs_PIC24/pic24f.h</itemPath>
+      <itemPath>FATfs_PIC24/uart_pic24f.h</itemPath>
+      <itemPath>FATfs_PIC24/xprintf.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -26,10 +29,12 @@
       <itemPath>LCDDisplay.c</itemPath>
       <itemPath>txRxRegisterConfiguration.c</itemPath>
       <itemPath>PinLocations.c</itemPath>
-      <itemPath>FAT32_fatf/source/diskio.c</itemPath>
-      <itemPath>FAT32_fatf/source/ff.c</itemPath>
-      <itemPath>FAT32_fatf/source/ffsystem.c</itemPath>
-      <itemPath>FAT32_fatf/source/ffunicode.c</itemPath>
+      <itemPath>FATfs_PIC24/ff.c</itemPath>
+      <itemPath>FATfs_PIC24/ffunicode.c</itemPath>
+      <itemPath>FATfs_PIC24/main.c</itemPath>
+      <itemPath>FATfs_PIC24/mmc_pic24f.c</itemPath>
+      <itemPath>FATfs_PIC24/uart_pic24f.c</itemPath>
+      <itemPath>FATfs_PIC24/xprintf.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -295,6 +300,16 @@
         <property key="programoptions.uselvpprogramming" value="true"/>
       </PKOBSKDEPlatformTool>
       <item path="PinLocations.c" ex="true" overriding="false">
+        <C30>
+        </C30>
+        <C30-AR>
+        </C30-AR>
+        <C30-AS>
+        </C30-AS>
+        <C30-LD>
+        </C30-LD>
+        <C30Global>
+        </C30Global>
       </item>
       <Simulator>
         <property key="codecoverage.enabled" value="Disable"/>
@@ -698,8 +713,28 @@
         <property key="warningmessagebreakoptions.warningmessages" value="holdstate"/>
       </Simulator>
       <item path="cc1101.h" ex="true" overriding="false">
+        <C30>
+        </C30>
+        <C30-AR>
+        </C30-AR>
+        <C30-AS>
+        </C30-AS>
+        <C30-LD>
+        </C30-LD>
+        <C30Global>
+        </C30Global>
       </item>
       <item path="cc1101Packet.h" ex="true" overriding="false">
+        <C30>
+        </C30>
+        <C30-AR>
+        </C30-AR>
+        <C30-AS>
+        </C30-AS>
+        <C30-LD>
+        </C30-LD>
+        <C30Global>
+        </C30Global>
       </item>
       <item path="txRxRegisterConfiguration.c" ex="false" overriding="false">
         <C30>

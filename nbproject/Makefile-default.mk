@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=spiCode.c LCDDisplay.c txRxRegisterConfiguration.c FAT32_fatf/source/diskio.c FAT32_fatf/source/ff.c FAT32_fatf/source/ffsystem.c FAT32_fatf/source/ffunicode.c
+SOURCEFILES_QUOTED_IF_SPACED=spiCode.c LCDDisplay.c txRxRegisterConfiguration.c FATfs_PIC24/ff.c FATfs_PIC24/ffunicode.c FATfs_PIC24/main.c FATfs_PIC24/mmc_pic24f.c FATfs_PIC24/uart_pic24f.c FATfs_PIC24/xprintf.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/spiCode.o ${OBJECTDIR}/LCDDisplay.o ${OBJECTDIR}/txRxRegisterConfiguration.o ${OBJECTDIR}/FAT32_fatf/source/diskio.o ${OBJECTDIR}/FAT32_fatf/source/ff.o ${OBJECTDIR}/FAT32_fatf/source/ffsystem.o ${OBJECTDIR}/FAT32_fatf/source/ffunicode.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/spiCode.o.d ${OBJECTDIR}/LCDDisplay.o.d ${OBJECTDIR}/txRxRegisterConfiguration.o.d ${OBJECTDIR}/FAT32_fatf/source/diskio.o.d ${OBJECTDIR}/FAT32_fatf/source/ff.o.d ${OBJECTDIR}/FAT32_fatf/source/ffsystem.o.d ${OBJECTDIR}/FAT32_fatf/source/ffunicode.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/spiCode.o ${OBJECTDIR}/LCDDisplay.o ${OBJECTDIR}/txRxRegisterConfiguration.o ${OBJECTDIR}/FATfs_PIC24/ff.o ${OBJECTDIR}/FATfs_PIC24/ffunicode.o ${OBJECTDIR}/FATfs_PIC24/main.o ${OBJECTDIR}/FATfs_PIC24/mmc_pic24f.o ${OBJECTDIR}/FATfs_PIC24/uart_pic24f.o ${OBJECTDIR}/FATfs_PIC24/xprintf.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/spiCode.o.d ${OBJECTDIR}/LCDDisplay.o.d ${OBJECTDIR}/txRxRegisterConfiguration.o.d ${OBJECTDIR}/FATfs_PIC24/ff.o.d ${OBJECTDIR}/FATfs_PIC24/ffunicode.o.d ${OBJECTDIR}/FATfs_PIC24/main.o.d ${OBJECTDIR}/FATfs_PIC24/mmc_pic24f.o.d ${OBJECTDIR}/FATfs_PIC24/uart_pic24f.o.d ${OBJECTDIR}/FATfs_PIC24/xprintf.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/spiCode.o ${OBJECTDIR}/LCDDisplay.o ${OBJECTDIR}/txRxRegisterConfiguration.o ${OBJECTDIR}/FAT32_fatf/source/diskio.o ${OBJECTDIR}/FAT32_fatf/source/ff.o ${OBJECTDIR}/FAT32_fatf/source/ffsystem.o ${OBJECTDIR}/FAT32_fatf/source/ffunicode.o
+OBJECTFILES=${OBJECTDIR}/spiCode.o ${OBJECTDIR}/LCDDisplay.o ${OBJECTDIR}/txRxRegisterConfiguration.o ${OBJECTDIR}/FATfs_PIC24/ff.o ${OBJECTDIR}/FATfs_PIC24/ffunicode.o ${OBJECTDIR}/FATfs_PIC24/main.o ${OBJECTDIR}/FATfs_PIC24/mmc_pic24f.o ${OBJECTDIR}/FATfs_PIC24/uart_pic24f.o ${OBJECTDIR}/FATfs_PIC24/xprintf.o
 
 # Source Files
-SOURCEFILES=spiCode.c LCDDisplay.c txRxRegisterConfiguration.c FAT32_fatf/source/diskio.c FAT32_fatf/source/ff.c FAT32_fatf/source/ffsystem.c FAT32_fatf/source/ffunicode.c
+SOURCEFILES=spiCode.c LCDDisplay.c txRxRegisterConfiguration.c FATfs_PIC24/ff.c FATfs_PIC24/ffunicode.c FATfs_PIC24/main.c FATfs_PIC24/mmc_pic24f.c FATfs_PIC24/uart_pic24f.c FATfs_PIC24/xprintf.c
 
 
 CFLAGS=
@@ -115,33 +115,47 @@ ${OBJECTDIR}/txRxRegisterConfiguration.o: txRxRegisterConfiguration.c  nbproject
 	${MP_CC} $(MP_EXTRA_CC_PRE)  txRxRegisterConfiguration.c  -o ${OBJECTDIR}/txRxRegisterConfiguration.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/txRxRegisterConfiguration.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/txRxRegisterConfiguration.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/FAT32_fatf/source/diskio.o: FAT32_fatf/source/diskio.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/FAT32_fatf/source" 
-	@${RM} ${OBJECTDIR}/FAT32_fatf/source/diskio.o.d 
-	@${RM} ${OBJECTDIR}/FAT32_fatf/source/diskio.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  FAT32_fatf/source/diskio.c  -o ${OBJECTDIR}/FAT32_fatf/source/diskio.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FAT32_fatf/source/diskio.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/FAT32_fatf/source/diskio.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/FATfs_PIC24/ff.o: FATfs_PIC24/ff.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/FATfs_PIC24" 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/ff.o.d 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/ff.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  FATfs_PIC24/ff.c  -o ${OBJECTDIR}/FATfs_PIC24/ff.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FATfs_PIC24/ff.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/FATfs_PIC24/ff.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/FAT32_fatf/source/ff.o: FAT32_fatf/source/ff.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/FAT32_fatf/source" 
-	@${RM} ${OBJECTDIR}/FAT32_fatf/source/ff.o.d 
-	@${RM} ${OBJECTDIR}/FAT32_fatf/source/ff.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  FAT32_fatf/source/ff.c  -o ${OBJECTDIR}/FAT32_fatf/source/ff.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FAT32_fatf/source/ff.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/FAT32_fatf/source/ff.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/FATfs_PIC24/ffunicode.o: FATfs_PIC24/ffunicode.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/FATfs_PIC24" 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/ffunicode.o.d 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/ffunicode.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  FATfs_PIC24/ffunicode.c  -o ${OBJECTDIR}/FATfs_PIC24/ffunicode.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FATfs_PIC24/ffunicode.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/FATfs_PIC24/ffunicode.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/FAT32_fatf/source/ffsystem.o: FAT32_fatf/source/ffsystem.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/FAT32_fatf/source" 
-	@${RM} ${OBJECTDIR}/FAT32_fatf/source/ffsystem.o.d 
-	@${RM} ${OBJECTDIR}/FAT32_fatf/source/ffsystem.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  FAT32_fatf/source/ffsystem.c  -o ${OBJECTDIR}/FAT32_fatf/source/ffsystem.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FAT32_fatf/source/ffsystem.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/FAT32_fatf/source/ffsystem.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/FATfs_PIC24/main.o: FATfs_PIC24/main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/FATfs_PIC24" 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/main.o.d 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  FATfs_PIC24/main.c  -o ${OBJECTDIR}/FATfs_PIC24/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FATfs_PIC24/main.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/FATfs_PIC24/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/FAT32_fatf/source/ffunicode.o: FAT32_fatf/source/ffunicode.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/FAT32_fatf/source" 
-	@${RM} ${OBJECTDIR}/FAT32_fatf/source/ffunicode.o.d 
-	@${RM} ${OBJECTDIR}/FAT32_fatf/source/ffunicode.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  FAT32_fatf/source/ffunicode.c  -o ${OBJECTDIR}/FAT32_fatf/source/ffunicode.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FAT32_fatf/source/ffunicode.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/FAT32_fatf/source/ffunicode.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/FATfs_PIC24/mmc_pic24f.o: FATfs_PIC24/mmc_pic24f.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/FATfs_PIC24" 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/mmc_pic24f.o.d 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/mmc_pic24f.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  FATfs_PIC24/mmc_pic24f.c  -o ${OBJECTDIR}/FATfs_PIC24/mmc_pic24f.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FATfs_PIC24/mmc_pic24f.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/FATfs_PIC24/mmc_pic24f.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/FATfs_PIC24/uart_pic24f.o: FATfs_PIC24/uart_pic24f.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/FATfs_PIC24" 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/uart_pic24f.o.d 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/uart_pic24f.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  FATfs_PIC24/uart_pic24f.c  -o ${OBJECTDIR}/FATfs_PIC24/uart_pic24f.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FATfs_PIC24/uart_pic24f.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/FATfs_PIC24/uart_pic24f.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/FATfs_PIC24/xprintf.o: FATfs_PIC24/xprintf.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/FATfs_PIC24" 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/xprintf.o.d 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/xprintf.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  FATfs_PIC24/xprintf.c  -o ${OBJECTDIR}/FATfs_PIC24/xprintf.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FATfs_PIC24/xprintf.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/FATfs_PIC24/xprintf.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 else
 ${OBJECTDIR}/spiCode.o: spiCode.c  nbproject/Makefile-${CND_CONF}.mk
@@ -165,33 +179,47 @@ ${OBJECTDIR}/txRxRegisterConfiguration.o: txRxRegisterConfiguration.c  nbproject
 	${MP_CC} $(MP_EXTRA_CC_PRE)  txRxRegisterConfiguration.c  -o ${OBJECTDIR}/txRxRegisterConfiguration.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/txRxRegisterConfiguration.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/txRxRegisterConfiguration.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/FAT32_fatf/source/diskio.o: FAT32_fatf/source/diskio.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/FAT32_fatf/source" 
-	@${RM} ${OBJECTDIR}/FAT32_fatf/source/diskio.o.d 
-	@${RM} ${OBJECTDIR}/FAT32_fatf/source/diskio.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  FAT32_fatf/source/diskio.c  -o ${OBJECTDIR}/FAT32_fatf/source/diskio.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FAT32_fatf/source/diskio.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/FAT32_fatf/source/diskio.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/FATfs_PIC24/ff.o: FATfs_PIC24/ff.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/FATfs_PIC24" 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/ff.o.d 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/ff.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  FATfs_PIC24/ff.c  -o ${OBJECTDIR}/FATfs_PIC24/ff.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FATfs_PIC24/ff.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/FATfs_PIC24/ff.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/FAT32_fatf/source/ff.o: FAT32_fatf/source/ff.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/FAT32_fatf/source" 
-	@${RM} ${OBJECTDIR}/FAT32_fatf/source/ff.o.d 
-	@${RM} ${OBJECTDIR}/FAT32_fatf/source/ff.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  FAT32_fatf/source/ff.c  -o ${OBJECTDIR}/FAT32_fatf/source/ff.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FAT32_fatf/source/ff.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/FAT32_fatf/source/ff.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/FATfs_PIC24/ffunicode.o: FATfs_PIC24/ffunicode.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/FATfs_PIC24" 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/ffunicode.o.d 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/ffunicode.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  FATfs_PIC24/ffunicode.c  -o ${OBJECTDIR}/FATfs_PIC24/ffunicode.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FATfs_PIC24/ffunicode.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/FATfs_PIC24/ffunicode.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/FAT32_fatf/source/ffsystem.o: FAT32_fatf/source/ffsystem.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/FAT32_fatf/source" 
-	@${RM} ${OBJECTDIR}/FAT32_fatf/source/ffsystem.o.d 
-	@${RM} ${OBJECTDIR}/FAT32_fatf/source/ffsystem.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  FAT32_fatf/source/ffsystem.c  -o ${OBJECTDIR}/FAT32_fatf/source/ffsystem.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FAT32_fatf/source/ffsystem.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/FAT32_fatf/source/ffsystem.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/FATfs_PIC24/main.o: FATfs_PIC24/main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/FATfs_PIC24" 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/main.o.d 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  FATfs_PIC24/main.c  -o ${OBJECTDIR}/FATfs_PIC24/main.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FATfs_PIC24/main.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/FATfs_PIC24/main.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/FAT32_fatf/source/ffunicode.o: FAT32_fatf/source/ffunicode.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/FAT32_fatf/source" 
-	@${RM} ${OBJECTDIR}/FAT32_fatf/source/ffunicode.o.d 
-	@${RM} ${OBJECTDIR}/FAT32_fatf/source/ffunicode.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  FAT32_fatf/source/ffunicode.c  -o ${OBJECTDIR}/FAT32_fatf/source/ffunicode.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FAT32_fatf/source/ffunicode.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/FAT32_fatf/source/ffunicode.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+${OBJECTDIR}/FATfs_PIC24/mmc_pic24f.o: FATfs_PIC24/mmc_pic24f.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/FATfs_PIC24" 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/mmc_pic24f.o.d 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/mmc_pic24f.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  FATfs_PIC24/mmc_pic24f.c  -o ${OBJECTDIR}/FATfs_PIC24/mmc_pic24f.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FATfs_PIC24/mmc_pic24f.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/FATfs_PIC24/mmc_pic24f.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/FATfs_PIC24/uart_pic24f.o: FATfs_PIC24/uart_pic24f.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/FATfs_PIC24" 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/uart_pic24f.o.d 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/uart_pic24f.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  FATfs_PIC24/uart_pic24f.c  -o ${OBJECTDIR}/FATfs_PIC24/uart_pic24f.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FATfs_PIC24/uart_pic24f.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/FATfs_PIC24/uart_pic24f.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/FATfs_PIC24/xprintf.o: FATfs_PIC24/xprintf.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/FATfs_PIC24" 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/xprintf.o.d 
+	@${RM} ${OBJECTDIR}/FATfs_PIC24/xprintf.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  FATfs_PIC24/xprintf.c  -o ${OBJECTDIR}/FATfs_PIC24/xprintf.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/FATfs_PIC24/xprintf.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/FATfs_PIC24/xprintf.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 
