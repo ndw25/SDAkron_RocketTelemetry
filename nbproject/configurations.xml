@@ -11,6 +11,9 @@
       <itemPath>config.h</itemPath>
       <itemPath>cc1101Packet.h</itemPath>
       <itemPath>cc1101.h</itemPath>
+      <itemPath>FAT32_fatf/source/diskio.h</itemPath>
+      <itemPath>FAT32_fatf/source/ff.h</itemPath>
+      <itemPath>FAT32_fatf/source/ffconf.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -23,6 +26,10 @@
       <itemPath>LCDDisplay.c</itemPath>
       <itemPath>txRxRegisterConfiguration.c</itemPath>
       <itemPath>PinLocations.c</itemPath>
+      <itemPath>FAT32_fatf/source/diskio.c</itemPath>
+      <itemPath>FAT32_fatf/source/ff.c</itemPath>
+      <itemPath>FAT32_fatf/source/ffsystem.c</itemPath>
+      <itemPath>FAT32_fatf/source/ffunicode.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
