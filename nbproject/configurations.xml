@@ -287,6 +287,8 @@
         <property key="programoptions.usehighvoltageonmclr" value="false"/>
         <property key="programoptions.uselvpprogramming" value="true"/>
       </PKOBSKDEPlatformTool>
+      <item path="PinLocations.c" ex="true" overriding="false">
+      </item>
       <Simulator>
         <property key="codecoverage.enabled" value="Disable"/>
         <property key="codecoverage.enableoutputtofile" value="false"/>
@@ -688,6 +690,10 @@
                   value=""/>
         <property key="warningmessagebreakoptions.warningmessages" value="holdstate"/>
       </Simulator>
+      <item path="cc1101.h" ex="true" overriding="false">
+      </item>
+      <item path="cc1101Packet.h" ex="true" overriding="false">
+      </item>
       <item path="txRxRegisterConfiguration.c" ex="false" overriding="false">
         <C30>
         </C30>
