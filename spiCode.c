@@ -37,13 +37,15 @@ unsigned char readSPI1(void) {
     return SPI1BUF; // Read the received value
 }// writeSPI1
 
-void us_delay(int us) {
+void us_delay(int us)   // Max value 32767 us = 0.032767s, min division 
+{
     T2CON = 0x8010; // Timer 2 on, TCKPS<1,0> = 01 thus 8 Prescale thus 2MHz
     TMR2 = 0;
     while (TMR2 < us * 2); // 1/16MHz/(8*2)) = 1us.)
 }
 
-void ms_delay(int ms) {
+void ms_delay(int ms)   // Max value 1048 ms = 1.048s, min division
+{
     T2CON = 0x8030; // Timer 2 on, TCKPS<1,0> = 11 thus 256 Prescale
     TMR2 = 0;
     while (TMR2 < ms * 63); // 1/16MHz/(256*63)) = 0.001008 close to 1 ms.)
@@ -88,7 +90,82 @@ void main(void) {
     us_delay(10);
     while (1) {
         ms_delay(500);
-        
-        
     }
+        
+    #include <stdio.h>
+#include "cc1101.h"
+
+void SetTxCS(int CSValue)
+{
+	PORTAbits.RA0 = CSValue
+}
+
+void CC1101_reset(void)
+{
+  SetTxCS(1);                  // Deselect CC1101
+  us_delay(5);
+  SetTxCS(0);                      // Select CC1101
+  us_delay(10);
+  SetTxCS(1);                    // Deselect CC1101
+  us_delay(41);
+  SetTxCS(0);                     // Select CC1101
+
+  while(PORTFbits.RF7==1);                          // Wait until MISO goes low
+  //spi_send(CC1101_SRES);                // Send reset command strobe
+  writeSPI1(SMARTRF_CMD_SRES); // CC1101 System Reset 
+  us_delay(10);
+  writeSPI1(0x0B);
+  us_delay(10);
+  while(PORTFbits.RF7==1);                        // Wait until MISO goes low
+
+  SetTxCS(1);                   // Deselect CC1101
+
+  txSetup;                     // Reconfigure CC1101
+  //setRegsFromEeprom();                  // Take user settings from EEPROM
+}
+
+void CC1101_init(void)
+{
+
+  CC1101_reset();                              // Reset CC1101
+
+  CC1101_setCarrierFreq(CFREQ_315);
+
+}
+
+void main() {
+
+  int i = 0;
+
+  // initialize the RF Chip
+  CC1101_init();
+
+  int data[61];
+  int datalength = 5;
+  data[0]=5;
+  data[1]=0xaa;
+  data[2]=0;
+  data[3]=1;
+  data[4]=0;
+
+  while(1)
+  {
+
+	  data.data[0]++;
+
+	  char sent = CC1101_sendData(data);
+
+	  if(!sent)
+		  printf("Failed!\n");
+	  else
+		  printf("Sent :)\n");
+
+	  us_delay(10000);
+	  us_delay();
+	  us
+  }
+
+
+}
+
 }
